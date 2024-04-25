@@ -42,9 +42,6 @@ public class Veiculo {
     @Column(name = "MODELO")
     private String modelo;
 
-    @Column(name = "PALAVRA_DE_EFEITO", length = 15)
-    private String palavraDeEfeito;
-
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(
             name = "TIPO_VEICULO",
